@@ -1,0 +1,19 @@
+<app-counter class="counter_progress" [total]="total" [completedCount]="completedCount()"></app-counter>
+<img src="../../../assets/img/progress.png" alt="" class="sit_progress">
+<picture>
+
+    <source media="(min-width: 1024px)"
+        [srcset]="(total === completedCount()) ? '../../../assets/img/celebration.gif' : '#'">
+    <img src="#" alt="" class="celebration celebration__1">
+
+</picture>
+
+<app-progress-circle [percentage]="(total > 0) ? completedCount() / total : 1"></app-progress-circle>
+
+<picture>
+
+    <source media="(min-width: 1024px)"
+        [srcset]="(total === completedCount()) ? '../../../assets/img/celebration.gif' : '#'">
+    <img src="#" alt="" class="celebration celebration__2">
+
+</picture>

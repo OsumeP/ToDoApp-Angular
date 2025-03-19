@@ -1,0 +1,7 @@
+<app-close-btn (click)="closeHandler()"></app-close-btn>
+<h1 class='create_h1'> Add a new ToDo </h1>
+<form class='form_create'>
+    <textarea placeholder="Watch anime" class="todo_name" [formControl] = "createInput"></textarea>
+    <button class="save_todo" type='button' (click)="addTodo()"> Add </button>
+</form>
+<img src='../../../assets/img/creation.gif' alt='Create Todo' class='new_todo_img' />

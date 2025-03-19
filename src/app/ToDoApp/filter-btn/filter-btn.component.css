@@ -1,0 +1,43 @@
+.filter_btn{
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 3px solid rgb(97, 96, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 50%;
+}
+
+button:hover{
+    animation-duration: 1s;
+    animation-name: rotate;
+    background-color: rgb(150, 150, 150);
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateX(0deg) rotateY(0deg);
+        transform-style: preserve-3d;
+    }
+    to{
+        transform: rotateX(0deg) rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+}
+
+@media (min-width: 600px){
+    .filter_btn{
+        width: 4rem;
+        height: 4rem;
+        bottom: 4.5rem;
+        right: 0;
+        left: auto;
+    }
+}

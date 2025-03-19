@@ -1,0 +1,40 @@
+<div class="root">
+    <app-progress class="progress" [total]="toDos().length"></app-progress>
+
+    <div class='todo'>
+        <app-counter class="counter_todo" [total]="toDos().length" [completedCount]="completedCount()"></app-counter>
+        <img src='../../../assets/img/lag-train.png' alt='' class='main_img' />
+        <app-search-bar class="app-search-bar" [searchedVal]="searchValue"></app-search-bar>
+
+        <ul class="todo_list">
+            @if (loading()) {
+            <app-loading></app-loading>
+            }
+            @else if(error()){
+            <p>Ocurrio un error</p>
+            }
+            @else if (!loading() && filteredList().length == 0) {
+            <app-empty-todo class="app_empty_todo"></app-empty-todo>
+            }
+            @else {
+                @for (todo of filteredList(); track $index) {
+                    @if (searchValue() == '' || todo.task.toLowerCase().includes(searchValue().toLowerCase())) {
+                        <app-todo-item [toDo]="todo" class="app-todo-item"></app-todo-item>
+                    }
+                }
+            }
+        </ul>
+
+        <app-filter-btn [showFilter]="showFilter"></app-filter-btn>
+        <app-create-todo-btn [showCreateTodo]="showCreateTodo"></app-create-todo-btn>
+    </div>
+
+
+
+    @if (showCreateTodo()) {
+    <app-create-todo class="create_todo" [todos]="toDos" [showComponent]="showCreateTodo"></app-create-todo>
+    }
+    @if(showFilter()){
+        <app-filter [filter]="filter" [filterList]="['All', 'Completed', 'Pending']" class="app_filter"></app-filter>
+    }
+</div>

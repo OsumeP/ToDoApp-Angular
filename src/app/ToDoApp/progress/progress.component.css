@@ -1,0 +1,29 @@
+.counter_progress{
+  position: absolute;
+  font-size: 21px;
+}
+.sit_progress{
+    position: relative;
+    width: 20%;
+    min-width: 100px;
+    max-width: 150px;
+    top: 40%;
+    z-index: 2;
+  }
+
+.celebration{
+  position: absolute;
+  bottom: 3px;
+  width: 106px;
+}
+.celebration__1{
+  right: 2px;
+}
+.celebration__2{
+  left: 2px;
+}
+@media (min-width: 1000px){
+  .counter_progress{
+    font-size: 2rem;
+  }
+}

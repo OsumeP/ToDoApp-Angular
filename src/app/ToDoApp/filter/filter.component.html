@@ -1,0 +1,9 @@
+<ul>
+    @for (item of filterList; track $index) {
+        <li>
+            <button (click)="applyFilter($index)">
+                {{item}}
+            </button>
+        </li>
+    }
+</ul>

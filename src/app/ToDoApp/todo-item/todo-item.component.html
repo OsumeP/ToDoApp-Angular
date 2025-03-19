@@ -1,0 +1,13 @@
+<li class='todo_item' (dblclick)="editMode()">
+
+    @if (edit()) {
+        <input [formControl]="editInput" class="item_input" (keydown.enter)="saveEdit()"/>
+    }
+    @else {
+        <app-check (click)="checkHandler()" 
+    [class]="{item_action: true, item_action__complete: true, svg: true, svg__check: true,
+         item_action__completed: completed(),}"></app-check>
+        <p [class]="{'item_description': true, item_description__completed: completed()}">{{task()}}</p>
+        <app-delete class="svg svg__delete item_action item_action__delete" (click) = "deleteHandler()"></app-delete>
+    }
+</li>

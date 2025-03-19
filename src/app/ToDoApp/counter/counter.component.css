@@ -1,0 +1,13 @@
+h1 {
+  font-size: 24px;
+  text-align:  center;
+  margin: 0px;
+  padding: 20px;
+  color: rgb(97, 96, 96);
+}
+@media (min-width: 600px){
+  h1{
+      font-size: 30px;
+      padding: 10px;
+  }
+}

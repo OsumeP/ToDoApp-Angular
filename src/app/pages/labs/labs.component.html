@@ -1,0 +1,8 @@
+<section>
+    <p>My name is {{user().name}}</p>
+    <img [src]="user().img" alt="">
+    <input (keydown)="keyDownHandler($event)" type="text" [value]="user().name">
+
+    <h3>Signals</h3>
+    <input type="text" (change)="changeInputHandler($event)" [value]="user().name">
+</section>

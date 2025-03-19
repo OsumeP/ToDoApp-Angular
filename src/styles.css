@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: "Noto-sans";
+    src: url(assets/font/NotoSans-VariableFont_wdth,wght.ttf);
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+  
+body{
+    font-family: "Noto-sans";
+    background-color: rgb(231, 231, 231);
+}

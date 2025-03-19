@@ -1,0 +1,14 @@
+.todo_search{
+    border: 2px solid rgb(184, 184, 184);
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    width: 90%;
+}
+@media (min-width: 600px){
+    .todo_search{
+        font-size: 20px;
+        width: 80%;
+        height: 40px;
+    }
+}
