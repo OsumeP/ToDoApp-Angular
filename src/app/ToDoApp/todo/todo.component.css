@@ -70,13 +70,6 @@
     justify-content: center;
     align-items: center;
 }
-@media (min-width: 700px){
-    .todo_list{
-        overflow-y: scroll;
-        height: 50vh;
-        width: 90%;
-    }
-}
 
 .todo_list::-webkit-scrollbar{
     width: 10px;
@@ -92,8 +85,8 @@
     background-color: rgb(184, 184, 184);
     border: 2px solid rgb(97, 96, 96) ;
     border-radius: 1rem;
-    right: 5rem;
-    bottom: 0;
+    left: 0;
+    bottom: 4rem;
 }
 
 
@@ -107,12 +100,26 @@
     .main_img{
         width: 50%;
     }
-}
-
-@media (min-width: 700px){
     .progress{
-      display: grid;
-      justify-items: center;
-      align-content: center;
+        display: grid;
+        justify-items: center;
+        align-content: center;
     }
-  }
+    .app_filter{
+        right: 5rem;
+        left: auto;
+        bottom: 0;
+    }
+    .todo_list{
+        overflow-y: scroll;
+        height: 60vh;
+        width: 90%;
+    }
+}
+@media (min-width: 1000px){
+    .todo_list{
+        overflow-y: scroll;
+        height: 50vh;
+        width: 90%;
+    }
+}
