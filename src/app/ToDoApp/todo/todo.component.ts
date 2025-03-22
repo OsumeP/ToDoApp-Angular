@@ -26,7 +26,7 @@ export class TodoComponent {
   error = signal(false);
   showCreateTodo = signal(false);
   completedCount = signal(0)
-  //0: all, 1: completed, 2: Pending
+  //0: all, 1: completed, 2: pending
   filter = signal(0);
   showFilter = signal(false);
   filteredList = computed(() => {
